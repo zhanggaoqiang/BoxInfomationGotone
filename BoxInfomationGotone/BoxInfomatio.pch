@@ -1,0 +1,26 @@
+//
+//  BoxInfomatio.pch
+//  BoxInfomationGotone
+//
+//  Created by 张高强 on 2017/2/17.
+//  Copyright © 2017年 ZhongHao. All rights reserved.
+//
+
+#ifndef BoxInfomatio_pch
+#define BoxInfomatio_pch
+#import "InterfaceUrlSetting.h"
+#import "BoxString.h"
+
+#import "BoxModel.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "STPickerArea.h"
+#import "UIImageView+WebCache.h"
+#import "UIView+RGSize.h"
+#import "UIAlertView+Block.h"
+#import "MJRefresh.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* BoxInfomatio_pch */
