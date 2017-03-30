@@ -590,9 +590,10 @@ int indexPage=4;
             
         }
           [ SVProgressHUD showSuccessWithStatus:@"刷新成功"];
-        [self.tab_list reloadData];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
              [SVProgressHUD dismiss];
+                   [self.tab_list reloadData];
+
             
         });
  
@@ -895,7 +896,7 @@ int indexPage=4;
         
         
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [ SVProgressHUD dismiss];
             
             

@@ -86,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5wA-Bi-LTW" id="M6g-cA-97Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FindCar_imgHight" translatesAutoresizingMaskIntoConstraints="NO" id="gVi-7O-pxY">
@@ -111,7 +111,7 @@
                                         <rect key="frame" x="0.0" y="78" width="375" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DD9-mD-jS5" id="aRG-y1-uQd">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="108.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avaterimage" translatesAutoresizingMaskIntoConstraints="NO" id="fjT-Lz-2xN">
@@ -522,6 +522,10 @@
                             <constraint firstAttribute="trailing" secondItem="3Pz-YK-PIS" secondAttribute="trailing" id="yQe-Sm-xyj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chezhuBtn" destination="MLt-wH-rwr" id="gdh-l5-EjI"/>
+                        <outlet property="identifylabel" destination="j17-Y3-6TO" id="opv-qL-Ggb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKk-9X-okF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3889,7 +3893,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WEs-Ki-chh" id="UC8-MI-MYf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avaterimage" translatesAutoresizingMaskIntoConstraints="NO" id="oo9-dx-PJs">

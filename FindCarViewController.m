@@ -448,9 +448,10 @@
             
         }
         [ SVProgressHUD showSuccessWithStatus:@"刷新成功"];
-        [self.tablist reloadData];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
+                [self.tablist reloadData];
+
             
         });
 
@@ -607,8 +608,6 @@
 
 -(void)firstPageRequest {
     
-    _dataArr=[NSMutableArray arrayWithCapacity:100];
-    
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     manager.requestSerializer=[AFHTTPRequestSerializer serializer];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
@@ -640,7 +639,7 @@
             model.index=BACKINFO_DIC_2_OBJECT(dict, @"csiId");
             [_dataArr addObject:model];
         }
-        [self.tablist reloadData];
+
         
         if ([dict[@"message"] isEqualToString:@"已经到最底部"] ) {
             self.tablist.mj_footer.state=MJRefreshStateNoMoreData;
@@ -648,8 +647,9 @@
         }
            [ SVProgressHUD showSuccessWithStatus:@"刷新成功"];
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
+            [self.tablist reloadData];
             
         });
 

@@ -19,12 +19,14 @@
     UIImage* paiZhaoImage;
 
 }
+@property (strong, nonatomic) IBOutlet UILabel *identifylabel;
 //@property (strong, nonatomic) IBOutlet UIScrollView *auscrollview;
 //@property (strong, nonatomic) IBOutlet UIImageView *AdentifyFore;
 //
 //@property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
 
 @property (strong, nonatomic) IBOutlet UIButton *backbutton;
+@property (strong, nonatomic) IBOutlet UIButton *chezhuBtn;
 
 @end
 
@@ -32,6 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changelabel:) name:@"chezhu" object:nil];
+    
     [_backbutton setTitle:@"认证中心" forState:UIControlStateNormal];
     [_backbutton setImage:[UIImage imageNamed:@"返回键"] forState:UIControlStateNormal];
   
@@ -50,12 +54,20 @@
 //    self.avatarImage.layer.cornerRadius=30;
 //    self.avatarImage.layer.masksToBounds=YES;
 //    
-    
+
     
     // Do any additional setup after loading the view.
 }
 
-
+-(void)changelabel:(NSNotification *)nf {
+    
+    
+    self.identifylabel.text=@"正在审核中";
+    self.identifylabel.textColor=[UIColor redColor];
+    self.chezhuBtn.enabled=NO;
+    
+    
+}
 
 
 - (IBAction)backBtn:(id)sender {
