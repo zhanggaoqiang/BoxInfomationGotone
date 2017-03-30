@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.phoneText.text=self.phoneStr;
     // Do any additional setup after loading the view from its nib.
 }
 

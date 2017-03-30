@@ -61,6 +61,16 @@
     }
     
     if (con.tag==1) {
+        
+        
+        if(!MATCH_PHONE(self.username.text)&&self.username.text!=NULL) {
+            
+            [SVProgressHUD showErrorWithStatus:@"手机号格式不对"];
+            [self.username becomeFirstResponder];
+            return;
+        }
+
+        
         if ([self.username.text isEqualToString:@""]) {
             [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
             
@@ -84,7 +94,8 @@
             return;
         }
     
-        
+        [self.username resignFirstResponder];
+        [self.password resignFirstResponder];
         
         
         
@@ -105,14 +116,50 @@
             
             if ([dict[@"flag"]  isEqual:@0]) {
                 
-                SingleDefaluts.bol_Login=YES;
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
+                [SVProgressHUD showWithStatus:@"登录中"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                    
+                    SingleDefaluts.bol_Login=YES;
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
+                    
+                    
+                    
+                    
+                    [self dismissViewControllerAnimated:YES completion:nil];
+
+                    
+                });
                 
-                
-                
-                
-                [self dismissViewControllerAnimated:YES completion:nil];
             }
+            
+            if ([dict[@"message"] isEqualToString:@"密码错误"]) {
+               [ SVProgressHUD showWithStatus:@"密码错误,请重新输入密码"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                    
+                    return;
+                });
+                
+            }
+            
+            
+            
+            if ([dict[@"message"] isEqualToString:@"账号不存在或者错误！"]) {
+                [ SVProgressHUD showWithStatus:@"账号不存在或密码错误"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                    
+                    return;
+                });
+                
+                
+            }
+            
+
+            
+            
+            
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"连接失败");

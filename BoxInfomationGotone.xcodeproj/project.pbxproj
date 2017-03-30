@@ -215,6 +215,7 @@
 		94E4EA821E17560F00DC724B /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E4EA7A1E17560F00DC724B /* AFURLRequestSerialization.m */; };
 		94E4EA831E17560F00DC724B /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E4EA7C1E17560F00DC724B /* AFURLResponseSerialization.m */; };
 		94E4EA841E17560F00DC724B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E4EA7E1E17560F00DC724B /* AFURLSessionManager.m */; };
+		94E798B41E8CA670001EDA72 /* 11111.png in Resources */ = {isa = PBXBuildFile; fileRef = 94E798B31E8CA670001EDA72 /* 11111.png */; };
 		94E9BF081E16561600E0DC2A /* FindGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E9BF071E16561600E0DC2A /* FindGoodsViewController.m */; };
 		94EC08921E7B75CA005CF4F3 /* ConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EC08901E7B75CA005CF4F3 /* ConfirmOrderViewController.m */; };
 		94EC08931E7B75CA005CF4F3 /* ConfirmOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EC08911E7B75CA005CF4F3 /* ConfirmOrderViewController.xib */; };
@@ -639,6 +640,7 @@
 		94E4EA7C1E17560F00DC724B /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		94E4EA7D1E17560F00DC724B /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		94E4EA7E1E17560F00DC724B /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		94E798B31E8CA670001EDA72 /* 11111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11111.png; sourceTree = "<group>"; };
 		94E9BF061E16561600E0DC2A /* FindGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindGoodsViewController.h; path = BoxInfomationGotone/FindGoodsViewController.h; sourceTree = "<group>"; };
 		94E9BF071E16561600E0DC2A /* FindGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindGoodsViewController.m; path = BoxInfomationGotone/FindGoodsViewController.m; sourceTree = "<group>"; };
 		94EBE43B1E56CDF5000075BB /* BoxInfomatio.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxInfomatio.pch; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 		943A58FF1E6D3D7C009C40D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
+				94E798B31E8CA670001EDA72 /* 11111.png */,
 				94E31F2E1E7E945800BC4CE1 /* MyCarManager */,
 				943A590D1E6D46C0009C40D4 /* PersonInfo */,
 				943A590C1E6D468B009C40D4 /* Complain */,
@@ -1664,6 +1667,7 @@
 				94BB89DA1E2B625100E13F84 /* icon_waypoint.png in Resources */,
 				94FC65151E766C34006FC008 /* ChangePasswordViewController.xib in Resources */,
 				94FC65101E7636BC006FC008 /* IdentifyCodeViewController.xib in Resources */,
+				94E798B41E8CA670001EDA72 /* 11111.png in Resources */,
 				94E34E961E8223120007A6CC /* OwnerCarTableViewCell.xib in Resources */,
 				942EC6131E4AA84200CB4AF4 /* FindGoodsCell.xib in Resources */,
 				94BB8A661E2B625200E13F84 /* test.png in Resources */,

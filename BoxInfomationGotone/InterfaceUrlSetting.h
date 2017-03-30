@@ -85,7 +85,7 @@
 
 
 #define appEditMySex  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMySex.do"//性别修改
-#define  appEditMyEmail  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMySex.do"//修改邮箱
+#define  appEditMyEmail  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyEmail.do"//修改邮箱
 
 #define appTestAccount @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appTestAccount.do"//验证账户是否存在
 

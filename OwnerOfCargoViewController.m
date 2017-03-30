@@ -165,7 +165,7 @@
                                                          @"application/octet-stream",
                                                          @"text/json",
                                                          nil];
-    [manager POST:appCargoOwnerIdentity parameters:@{@"account":@"18538556305"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager POST:appCargoOwnerIdentity parameters:@{@"account":@"15324715795"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         //
         //        self.avaterImage.image
         for (int i=0;i<3;i++) {

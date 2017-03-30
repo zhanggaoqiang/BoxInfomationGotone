@@ -46,6 +46,13 @@
 
 @implementation SettingViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self firstPageRequest];
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _dataArr=[[NSArray alloc] initWithObjects:@[@"站位"],@[@"我的订单"],@[@"我的钱包"],@[@"消息中心"],@[@"会员中心"] ,@[@"认证中心",@"我的车辆",@"投诉/客服",@"我的收藏",@"注销"],nil];
@@ -93,6 +100,8 @@
         _email=BACKINFO_DIC_2_OBJECT(dict, @"email");
         _name=BACKINFO_DIC_2_OBJECT(dict, @"name");
         _phoneNum=BACKINFO_DIC_2_OBJECT(dict, @"phoneNum");
+        
+        _gender=BACKINFO_DIC_2_OBJECT(dict, @"sex");
      
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"连接失败");
@@ -178,7 +187,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section==5&&indexPath.row==4) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"logout" object:nil];
+        
+        [SVProgressHUD showWithStatus:@"退出登录"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"logout" object:nil];
+            
+        });
+       
  
     }
     
@@ -197,21 +213,25 @@
         
         NSLog(@"姓名是%@",self.name);
     
-       pv.imageStr=self.imageStr;
+        pv.imageStr=self.imageStr;
         pv.name=self.name;
         pv.phone=self.phoneNum;
+        pv.email=self.email;
+        pv.sex=self.gender;
         
     
         
-        pv.block=^(NSString *str,NSString *str2,NSString *str3,NSString *imageStr) {
+        pv.block=^(NSString *str,NSString *str2,NSString *str3,NSString *imageStr,NSString *gender) {
             
             self.name=str;
             self.phoneNum=str2;
             self.email=str3;
             self.imageStr=imageStr;
+            self.gender=gender;
             
             
-            NSLog(@"self.phone是:%@",self.phoneNum);
+            
+            NSLog(@"性别是:%@",self.gender);
             
             
         };

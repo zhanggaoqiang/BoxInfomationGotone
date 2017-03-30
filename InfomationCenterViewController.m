@@ -19,6 +19,11 @@
 
 @implementation InfomationCenterViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [self firstPageRequest];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _tablist.delegate=self;

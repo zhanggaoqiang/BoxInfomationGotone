@@ -12,6 +12,9 @@
 #import "PhoneModifyViewController.h"
 
 @interface PersonInfoViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+{
+    int flag;
+}
 @property (strong, nonatomic) IBOutlet UIButton *avaterImage;
 @property (strong, nonatomic) IBOutlet UIButton *nameBtn;
 
@@ -33,28 +36,37 @@
 
 @implementation PersonInfoViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
    
   //  imagePre =[imagePre  stringByAppendingString:_imageStr];
+    self.imageString=self.imageStr;
     
     NSString *str=@"http://192.168.18.65:8080/ContainerofCommunication/";
-    if(self.imageStr !=nil){
-        str=[str stringByAppendingString:self.imageStr];
+    
+    if(self.imageString !=nil){
+        str=[str stringByAppendingString:self.imageString];
+        //首先得拿到照片的路径，也就是下边的string参数，转换为NSData型。
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:str]];
+        
+        //然后就是添加照片语句，这次不是`imageWithName`了，是 imageWithData。
+        self.touxiangImage.image= [UIImage imageWithData:data];
 
+    }else {
+        
+        self.touxiangImage.image=[UIImage imageNamed:@"11111.png"];
     }
     
-    else {
-        return;
-    }
     
     
-    
-    NSLog(@"拼接的字符串地址:%@",str);
-    
-    [self.touxiangImage sd_setImageWithURL:[NSURL URLWithString:str]];
     self.nameLabel.text=self.name;
+    self.emailLabel.text=self.email;
+    self.phoneLabel.text=self.phone;
+    self.genderLabel.text=self.sex;
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -64,6 +76,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)avaerUpload:(id)sender {
+    flag=1;
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从手机相册选取", nil];
     [actionSheet showInView:self.view];
@@ -77,6 +90,8 @@
 #pragma mark- UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    if (flag==1) {
+        
     
     if (buttonIndex == 0)
     {
@@ -88,6 +103,48 @@
     {
         UIImagePickerController *pick = [self openPhotoToViewController:self sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
         pick.delegate = self;
+    }
+    }
+    
+    if (flag==2) {
+        
+        if (buttonIndex == 0)
+        {
+           self.genderLabel.text=@"男";
+        }
+        
+        if (buttonIndex == 1)
+        {
+           
+            self.genderLabel.text=@"女";
+            
+            
+        }
+        
+        
+        
+        AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+        manager.requestSerializer=[AFHTTPRequestSerializer serializer];
+        manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+        [manager POST: appEditMySex parameters:@{@"account":@"18538556305",@"sex":self.genderLabel.text} progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        }
+         
+              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD dismiss];
+            NSLog(@"连接失败");
+        }];
+
+
+        
+        
+        
+        
     }
 }
 
@@ -184,7 +241,18 @@
     [self.navigationController pushViewController:nvc animated:YES];
 }
 - (IBAction)genderIdentify:(id)sender {
+    flag=2;
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"男",@"女", nil];
+    [actionSheet showInView:self.view];
+
+    
+    
+    
+    
 }
+#pragma mark- UIActionSheetDelegate
+
 
 - (IBAction)phoneIdentify:(id)sender {
     PhoneModifyViewController *phone=[[PhoneModifyViewController alloc] init];
@@ -214,7 +282,7 @@
 
 - (IBAction)backBtn:(id)sender {
     
-    self.block(self.nameLabel.text,self.phoneLabel.text,self.emailLabel.text,self.imageStr);
+    self.block(self.nameLabel.text,self.phoneLabel.text,self.emailLabel.text,self.imageStr,self.genderLabel.text);
     
     [self.navigationController popViewControllerAnimated:YES];
 }

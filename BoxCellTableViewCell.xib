@@ -29,7 +29,7 @@
                             <constraint firstAttribute="height" constant="1" id="8JS-5s-V67"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avaterimage" translatesAutoresizingMaskIntoConstraints="NO" id="Qfy-nH-iXl">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholdImage" translatesAutoresizingMaskIntoConstraints="NO" id="Qfy-nH-iXl">
                         <rect key="frame" x="20" y="10" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="UDj-tu-2PX"/>
@@ -142,6 +142,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="avaterimage" width="220" height="220"/>
+        <image name="placeholdImage" width="63" height="63"/>
     </resources>
 </document>

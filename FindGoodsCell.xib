@@ -22,7 +22,7 @@
                         <rect key="frame" x="5" y="5" width="310" height="119"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="FindGoodsCell" image="avaterimage" translatesAutoresizingMaskIntoConstraints="NO" id="CMR-dg-VYh">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="FindGoodsCell" image="placeholdImage" translatesAutoresizingMaskIntoConstraints="NO" id="CMR-dg-VYh">
                         <rect key="frame" x="10" y="10" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="2wO-K0-xHT"/>
@@ -176,6 +176,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="avaterimage" width="220" height="220"/>
+        <image name="placeholdImage" width="63" height="63"/>
     </resources>
 </document>

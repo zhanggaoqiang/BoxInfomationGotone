@@ -18,6 +18,16 @@
 @property (strong, nonatomic) IBOutlet UIImageView *drivingLicense;
 @property (strong, nonatomic) IBOutlet UIImageView *jiashiLicense;
 
+
+
+@property (strong, nonatomic)  UIImageView *avaterImage1;
+@property (strong, nonatomic)  UIImageView *identifyInfo1;
+@property (strong, nonatomic)  UIImageView *identifyBack1;
+@property (strong, nonatomic)  UIImageView *drivingLicense1;
+@property (strong, nonatomic)  UIImageView *jiashiLicense1;
+
+
+
 @property(strong,nonatomic)NSMutableArray *imagArray;
 
 
@@ -28,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _avaterImage1=nil;
     _imagArray =[NSMutableArray arrayWithCapacity:100];
     
     
@@ -116,6 +126,8 @@
     switch (flag) {
         case 1:{
             self.avaterImage.image=image;
+            self.avaterImage1=[[UIImageView alloc] init];
+            self.avaterImage1.image=image;
 //            if (self.imagArray.count!=0) {
 //                [self.imagArray removeObjectAtIndex:0];
 //            }
@@ -127,6 +139,9 @@
             break;
         case 2:{
             self.identifyInfo.image=image;
+            self.identifyInfo1=[[UIImageView alloc] init];
+            
+            self.identifyInfo1.image=image;
             // [self.imagArray addObject:self.identifyCardFore.image];
             
         }
@@ -134,18 +149,26 @@
             break;
         case 3:{
             self.identifyBack.image=image;
+            self.identifyBack1=[[UIImageView alloc] initWithImage:image];
+            
+            //self.identifyBack1.image=image;
             //  [self.imagArray addObject:self.identifyCardBack.image];
         }
             
             break;
         case 4:{
             self.drivingLicense.image=image;
+            self.drivingLicense1=[[UIImageView alloc] init];
+            self.drivingLicense1.image=image;
             //  [self.imagArray addObject:self.enterprisePicture.image];
         }
             
             break;
         case 5:{
             self.jiashiLicense.image=image;
+            self.jiashiLicense1=[[UIImageView alloc] init];
+            
+            self.jiashiLicense1.image=image;
             //  [self.imagArray addObject:self.enterpriseCode.image];
             
         }
@@ -186,18 +209,37 @@
 }
 - (IBAction)ensureUpload:(id)sender {
     
-    if(self.avaterImage==nil) {
+    if(self.avaterImage1==nil) {
         [SVProgressHUD showErrorWithStatus:@"请上传头像"];
         return;
     }
     
-    [self.imagArray  addObject:self.avaterImage.image];
-    [self.imagArray addObject:self.identifyInfo.image];
-    [self.imagArray addObject:self.identifyBack.image];
-    [self.imagArray addObject:self.drivingLicense.image];
-    [self.imagArray addObject:self.jiashiLicense.image];
+    if (self.identifyInfo1==nil) {
+          [SVProgressHUD showErrorWithStatus:@"请上传身份证正面照"];
+        return;
+    }
     
     
+    if (self.identifyBack1==nil) {
+        [SVProgressHUD showErrorWithStatus:@"请上传身份证反面照"];
+        return;
+    }
+    if (self.drivingLicense1==nil) {
+        [SVProgressHUD showErrorWithStatus:@"请上传行驶证"];
+        return;
+    }
+
+    
+    if (self.jiashiLicense1==nil) {
+        [SVProgressHUD showErrorWithStatus:@"请上传驾驶证"];
+        return;
+    }
+    
+    [self.imagArray  addObject:self.avaterImage1.image];
+    [self.imagArray addObject:self.identifyInfo1.image];
+    [self.imagArray addObject:self.identifyBack1.image];
+    [self.imagArray addObject:self.drivingLicense1.image];
+    [self.imagArray addObject:self.jiashiLicense1.image];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer=[AFHTTPRequestSerializer serializer];
@@ -232,17 +274,49 @@
         
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        [uploadProgress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:nil];
+        
+
         //打印下上传进度
         NSLog(@"上传进度");
         NSLog(@"%@",uploadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //上传成功
+        
+        
+        [SVProgressHUD showSuccessWithStatus:@"上传成功"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        });
         NSLog(@"上传成功");
         NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //上传失败
         NSLog(@"上传失败");
     }];
+}
+
+
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    if ([keyPath isEqualToString:@"fractionCompleted"]&&[object isKindOfClass:[NSProgress class]]) {
+        NSProgress *progress1 =(NSProgress *)object;
+        
+        __block typeof(progress1) progress = progress1;
+        dispatch_sync(dispatch_get_main_queue(), ^() {
+            double flt_Count=(float)progress.completedUnitCount/(float)(progress.totalUnitCount);
+            [SVProgressHUD showProgress:flt_Count status:@"uploading"];
+            
+            
+        });
+        
+    }
+    
 }
 
 /*

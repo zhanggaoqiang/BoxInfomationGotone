@@ -10,4 +10,11 @@
 
 @interface ZGQGetUserInfo : NSObject
 
+
+
+/**
+ *  用户手机号
+ */
+@property (nonatomic, strong) NSString      * str_member_mobile;
+
 @end

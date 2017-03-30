@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.emailTextFiled.text=self.emailText;
     // Do any additional setup after loading the view from its nib.
 }
 
