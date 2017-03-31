@@ -157,7 +157,6 @@
     //先从数据源数组中删除指定的数据
         //删除指定索引
     [_dataArr removeObjectAtIndex:indexPath.row];
-    NSDictionary *dict= _dataArr[indexPath.row];
 //    NSString *index=dict[@"tild"];
 //    NSLog(@"这一条信息的id是%@",index);
 //    

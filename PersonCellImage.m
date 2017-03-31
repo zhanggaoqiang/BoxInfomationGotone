@@ -18,7 +18,6 @@
 
 -(void)showDataWithModel:(PersonCenterAvaterModel *)model {
     
-    NSString *str=[imagePre stringByAppendingString:model.imageStr];
     
 //    [ self.avaterImage  sd_setImageWithURL:[NSURL URLWithString:  str ] completed:nil];
     

@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "94CD6D851E8E2BAB00694903"
+               BuildableName = "BoxInfomationGotoneTests.xctest"
+               BlueprintName = "BoxInfomationGotoneTests"
+               ReferencedContainer = "container:BoxInfomationGotone.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "94CD6D931E8E2C5C00694903"
+               BuildableName = "BoxInfomationGotoneUITests.xctest"
+               BlueprintName = "BoxInfomationGotoneUITests"
+               ReferencedContainer = "container:BoxInfomationGotone.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -62,6 +82,11 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction

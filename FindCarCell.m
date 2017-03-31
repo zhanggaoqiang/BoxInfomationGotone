@@ -36,7 +36,7 @@
     self.volumeLabel.text=model.csiCargoWeight;
     self.goodlength.text=model.csiMinTruckLength;
     self.goodsKinds.text=model.csiCargoDesc;
-     
+    
 }
 
 @end

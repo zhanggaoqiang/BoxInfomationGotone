@@ -92,8 +92,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-  
+         
         
         [SVProgressHUD showWithStatus:@"，已经收到你的投诉，我们会尽快处理" ];
        

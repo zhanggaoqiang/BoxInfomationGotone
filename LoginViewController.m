@@ -51,6 +51,7 @@
     
 }
 - (IBAction)backButton:(UIButton *)sender {
+ 
     
     UIControl *con =(UIControl *)sender;
     if (con.tag==2) {
@@ -62,36 +63,48 @@
     
     if (con.tag==1) {
         
+        if ([self.username.text isEqualToString:@""]) {
+            [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
+            [self.username resignFirstResponder];
+
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                return;
+                
+            });
+            
+            
+            
+        }
+
+        
         
         if(!MATCH_PHONE(self.username.text)&&self.username.text!=NULL) {
             
             [SVProgressHUD showErrorWithStatus:@"手机号格式不对"];
-            [self.username becomeFirstResponder];
-            return;
+            [self.username resignFirstResponder];
+
+            
+          
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                return;
+                
+            });
         }
 
         
-        if ([self.username.text isEqualToString:@""]) {
-            [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-                
-            });
-
-            return;
-
-        }
         
         if([self.password.text isEqualToString:@""] ){
             [SVProgressHUD showErrorWithStatus:@"密码不能为空"];
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
+                return;
                 
             });
 
-            return;
+        
         }
     
         [self.username resignFirstResponder];

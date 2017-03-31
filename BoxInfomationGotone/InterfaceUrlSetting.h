@@ -40,81 +40,81 @@
 #define windowContentHeight ([[UIScreen mainScreen] bounds].size.height)
 
 
-#define PREFIX @"http://192.168.18.65:8080/ContainerofCommunication/mobile/"
+#define PREFIX @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/"
 
-#define loginUrl @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appLogin.do"//登录
-#define firstPage @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCarlist.do"//首页数据
-#define adressfind @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCarSourceInfoByPlace.do"//车源大厅地址选择查询
-#define verifyCode @"http://192.168.18.65:8080/ContainerofCommunication/mobile/verifyCode.do"//获取验证码
-#define registUrl @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appRegister.do"//注册
-#define goodsOwner @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCargoList.do"//货主界面
+#define loginUrl @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appLogin.do"//登录
+#define firstPage @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCarlist.do"//首页数据
+#define adressfind @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCarSourceInfoByPlace.do"//车源大厅地址选择查询
+#define verifyCode @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/verifyCode.do"//获取验证码
+#define registUrl @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appRegister.do"//注册
+#define goodsOwner @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCargoList.do"//货主界面
 
-#define goodsOwnerIdentify @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appPublishContainerInfo.do"//发布箱源
+#define goodsOwnerIdentify @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appPublishContainerInfo.do"//发布箱源
 
-#define adressfind1 @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCargoInfoByPlace.do"//地址选择查询货源大厅
+#define adressfind1 @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCargoInfoByPlace.do"//地址选择查询货源大厅
 
-#define boxOwner @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appContainerList.do"//箱源信息
+#define boxOwner @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appContainerList.do"//箱源信息
 //appCargoOwnerIdentity
 
-#define boxOwnerFind  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appContainerListByPlace.do"///箱源地址查询
-#define pulishCargoInfo @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appPublishCargoInfo.do"//发布货源
+#define boxOwnerFind  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appContainerListByPlace.do"///箱源地址查询
+#define pulishCargoInfo @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appPublishCargoInfo.do"//发布货源
 
 
-#define appCarOwnerIdentity   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCarOwnerIdentity.do"//个人车主认证
+#define appCarOwnerIdentity   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCarOwnerIdentity.do"//个人车主认证
 
-#define appCargoOwnerIdentity  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCargoOwnerIdentity.do"//个人货主认证
-#define appEnterpriseCargoOwnerIdentity   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEnterpriseCargoOwnerIdentity.do"//企业货主认证
-
-
-#define appCLCIdentity @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCLCIdentity.do"
-#define  appGetMyInfo  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetMyInfo.do"
-#define appEditMyImage @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyImage.do"//个人头像上传
-#define appEditMyNikeName   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyNikeName.do"//昵称修改
-#define appEditMyPhoneNum  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyPhoneNum.do"//手机号修改
+#define appCargoOwnerIdentity  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCargoOwnerIdentity.do"//个人货主认证
+#define appEnterpriseCargoOwnerIdentity   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEnterpriseCargoOwnerIdentity.do"//企业货主认证
 
 
-#define imagePre @"http://192.168.18.65:8080/ContainerofCommunication"
+#define appCLCIdentity @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCLCIdentity.do"
+#define  appGetMyInfo  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appGetMyInfo.do"
+#define appEditMyImage @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMyImage.do"//个人头像上传
+#define appEditMyNikeName   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMyNikeName.do"//昵称修改
+#define appEditMyPhoneNum  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMyPhoneNum.do"//手机号修改
+
+
+#define imagePre @"http://192.169.16.183:8080/ContainerofCommunication"
 /**
  *  通用请求前缀 本地
  *
  *  @return 返回前缀
  */
-#define REQUEST_IP_PREFIX   @"http://192.168.18.65:8080"
+#define REQUEST_IP_PREFIX   @"http://192.169.16.183:8080"
 
 
 
 
-#define appEditMySex  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMySex.do"//性别修改
-#define  appEditMyEmail  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyEmail.do"//修改邮箱
+#define appEditMySex  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMySex.do"//性别修改
+#define  appEditMyEmail  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMyEmail.do"//修改邮箱
 
-#define appTestAccount @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appTestAccount.do"//验证账户是否存在
-
-
-#define appSendCode @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appSendCode.do"//发送验证码
+#define appTestAccount @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appTestAccount.do"//验证账户是否存在
 
 
-#define appTestCode  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appTestCode.do"//验证验证码
-
-#define appEditMyPassword  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyPassword.do"//修改密码
-
-#define appGetOneTruckInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetOneTruckInfo.do"//车源详情
-
-#define appGetOneCargoInfo @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetOneCargoInfo.do"//货源详情
-
-#define  appGetOneContainerInfo  @"http://192.168.18.65:8080/ContainerofCommunication/appGetOneContainerInfo.do"//箱源详情
-
-#define appComplaintInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appComplaintInfo.do"//投诉
-#define appMyOwnerCarList  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appMyOwnerCarList.do"//我的车辆
+#define appSendCode @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appSendCode.do"//发送验证码
 
 
-#define appAddMyOwnerCarInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appAddMyOwnerCarInfo.do"//增加车辆
-#define appDeleteMyOwnerCarInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appDeleteMyOwnerCarInfo.do"//删除一条车辆
+#define appTestCode  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appTestCode.do"//验证验证码
 
-#define appEditMyOwnerCarInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appEditMyOwnerCarInfo.do"//编辑车辆
-#define appPublishTruckInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appPublishTruckInfo.do"//发布车源
+#define appEditMyPassword  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMyPassword.do"//修改密码
+
+#define appGetOneTruckInfo   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appGetOneTruckInfo.do"//车源详情
+
+#define appGetOneCargoInfo @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appGetOneCargoInfo.do"//货源详情
+
+#define  appGetOneContainerInfo  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/appGetOneContainerInfo.do"//箱源详情
+
+#define appComplaintInfo   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appComplaintInfo.do"//投诉
+#define appMyOwnerCarList  @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appMyOwnerCarList.do"//我的车辆
 
 
-#define appCargoSourceOrder @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appCargoSourceOrder.do"//获取订单
+#define appAddMyOwnerCarInfo   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appAddMyOwnerCarInfo.do"//增加车辆
+#define appDeleteMyOwnerCarInfo   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appDeleteMyOwnerCarInfo.do"//删除一条车辆
+
+#define appEditMyOwnerCarInfo   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appEditMyOwnerCarInfo.do"//编辑车辆
+#define appPublishTruckInfo   @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appPublishTruckInfo.do"//发布车源
+
+
+#define appCargoSourceOrder @"http://xxt.zhonghaokeji.cn/ContainerofCommunication/mobile/appCargoSourceOrder.do"//获取订单
 
 
 

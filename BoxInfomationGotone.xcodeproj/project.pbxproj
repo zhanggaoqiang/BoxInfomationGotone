@@ -154,6 +154,8 @@
 		94CBF1D31E5D328A00B50A9E /* UIView+STFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CBF1CD1E5D328A00B50A9E /* UIView+STFrame.m */; };
 		94CD1BE71E792BB900C34F84 /* GoodSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CD1BE51E792BB900C34F84 /* GoodSourcesViewController.m */; };
 		94CD1BE81E792BB900C34F84 /* GoodSourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94CD1BE61E792BB900C34F84 /* GoodSourcesViewController.xib */; };
+		94CD6D891E8E2BAB00694903 /* BoxInfomationGotoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CD6D881E8E2BAB00694903 /* BoxInfomationGotoneTests.m */; };
+		94CD6D971E8E2C5C00694903 /* BoxInfomationGotoneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CD6D961E8E2C5C00694903 /* BoxInfomationGotoneUITests.m */; };
 		94CD983D1E2C6E9800B149E0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CD98341E2C6E9800B149E0 /* SVIndefiniteAnimatedView.m */; };
 		94CD983E1E2C6E9800B149E0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94CD98361E2C6E9800B149E0 /* SVProgressAnimatedView.m */; };
 		94CD983F1E2C6E9800B149E0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94CD98381E2C6E9800B149E0 /* SVProgressHUD.bundle */; };
@@ -230,6 +232,23 @@
 		94FC65141E766C34006FC008 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC65121E766C34006FC008 /* ChangePasswordViewController.m */; };
 		94FC65151E766C34006FC008 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC65131E766C34006FC008 /* ChangePasswordViewController.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94CD6D8B1E8E2BAB00694903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94642EC51E16392200F47883 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94642ECC1E16392200F47883;
+			remoteInfo = BoxInfomationGotone;
+		};
+		94CD6D991E8E2C5C00694903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94642EC51E16392200F47883 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94642ECC1E16392200F47883;
+			remoteInfo = BoxInfomationGotone;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		94051A541E52F1D20081B8D5 /* BoxKindsChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxKindsChoiceViewController.h; sourceTree = "<group>"; };
@@ -529,6 +548,12 @@
 		94CD1BE41E792BB900C34F84 /* GoodSourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodSourcesViewController.h; sourceTree = "<group>"; };
 		94CD1BE51E792BB900C34F84 /* GoodSourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodSourcesViewController.m; sourceTree = "<group>"; };
 		94CD1BE61E792BB900C34F84 /* GoodSourcesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodSourcesViewController.xib; sourceTree = "<group>"; };
+		94CD6D861E8E2BAB00694903 /* BoxInfomationGotoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxInfomationGotoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CD6D881E8E2BAB00694903 /* BoxInfomationGotoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxInfomationGotoneTests.m; sourceTree = "<group>"; };
+		94CD6D8A1E8E2BAB00694903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CD6D941E8E2C5C00694903 /* BoxInfomationGotoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxInfomationGotoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CD6D961E8E2C5C00694903 /* BoxInfomationGotoneUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxInfomationGotoneUITests.m; sourceTree = "<group>"; };
+		94CD6D981E8E2C5C00694903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94CD98331E2C6E9800B149E0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		94CD98341E2C6E9800B149E0 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		94CD98351E2C6E9800B149E0 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -705,6 +730,20 @@
 				94A2C1651E276A9800AD584A /* BaiduMapAPI_Base.framework in Frameworks */,
 				94A2C1681E276A9800AD584A /* BaiduMapAPI_Map.framework in Frameworks */,
 				94A2C16B1E276A9800AD584A /* BaiduMapAPI_Utils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CD6D831E8E2BAB00694903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CD6D911E8E2C5C00694903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1064,6 +1103,8 @@
 			isa = PBXGroup;
 			children = (
 				94642ECF1E16392300F47883 /* BoxInfomationGotone */,
+				94CD6D871E8E2BAB00694903 /* BoxInfomationGotoneTests */,
+				94CD6D951E8E2C5C00694903 /* BoxInfomationGotoneUITests */,
 				94642ECE1E16392300F47883 /* Products */,
 				94D720E41E778949006F784C /* Frameworks */,
 			);
@@ -1073,6 +1114,8 @@
 			isa = PBXGroup;
 			children = (
 				94642ECD1E16392300F47883 /* BoxInfomationGotone.app */,
+				94CD6D861E8E2BAB00694903 /* BoxInfomationGotoneTests.xctest */,
+				94CD6D941E8E2C5C00694903 /* BoxInfomationGotoneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1293,6 +1336,24 @@
 				94E34E941E8223120007A6CC /* OwnerCarTableViewCell.xib */,
 			);
 			name = GoodsOwner;
+			sourceTree = "<group>";
+		};
+		94CD6D871E8E2BAB00694903 /* BoxInfomationGotoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				94CD6D881E8E2BAB00694903 /* BoxInfomationGotoneTests.m */,
+				94CD6D8A1E8E2BAB00694903 /* Info.plist */,
+			);
+			path = BoxInfomationGotoneTests;
+			sourceTree = "<group>";
+		};
+		94CD6D951E8E2C5C00694903 /* BoxInfomationGotoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94CD6D961E8E2C5C00694903 /* BoxInfomationGotoneUITests.m */,
+				94CD6D981E8E2C5C00694903 /* Info.plist */,
+			);
+			path = BoxInfomationGotoneUITests;
 			sourceTree = "<group>";
 		};
 		94CD98321E2C6E9800B149E0 /* PZSVProgressHUD */ = {
@@ -1558,6 +1619,42 @@
 			productReference = 94642ECD1E16392300F47883 /* BoxInfomationGotone.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94CD6D851E8E2BAB00694903 /* BoxInfomationGotoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94CD6D8F1E8E2BAB00694903 /* Build configuration list for PBXNativeTarget "BoxInfomationGotoneTests" */;
+			buildPhases = (
+				94CD6D821E8E2BAB00694903 /* Sources */,
+				94CD6D831E8E2BAB00694903 /* Frameworks */,
+				94CD6D841E8E2BAB00694903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94CD6D8C1E8E2BAB00694903 /* PBXTargetDependency */,
+			);
+			name = BoxInfomationGotoneTests;
+			productName = BoxInfomationGotoneTests;
+			productReference = 94CD6D861E8E2BAB00694903 /* BoxInfomationGotoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94CD6D931E8E2C5C00694903 /* BoxInfomationGotoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94CD6D9B1E8E2C5C00694903 /* Build configuration list for PBXNativeTarget "BoxInfomationGotoneUITests" */;
+			buildPhases = (
+				94CD6D901E8E2C5C00694903 /* Sources */,
+				94CD6D911E8E2C5C00694903 /* Frameworks */,
+				94CD6D921E8E2C5C00694903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94CD6D9A1E8E2C5C00694903 /* PBXTargetDependency */,
+			);
+			name = BoxInfomationGotoneUITests;
+			productName = BoxInfomationGotoneUITests;
+			productReference = 94CD6D941E8E2C5C00694903 /* BoxInfomationGotoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1592,6 +1689,16 @@
 							};
 						};
 					};
+					94CD6D851E8E2BAB00694903 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 94642ECC1E16392200F47883;
+					};
+					94CD6D931E8E2C5C00694903 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 94642ECC1E16392200F47883;
+					};
 				};
 			};
 			buildConfigurationList = 94642EC81E16392200F47883 /* Build configuration list for PBXProject "BoxInfomationGotone" */;
@@ -1608,6 +1715,8 @@
 			projectRoot = "";
 			targets = (
 				94642ECC1E16392200F47883 /* BoxInfomationGotone */,
+				94CD6D851E8E2BAB00694903 /* BoxInfomationGotoneTests */,
+				94CD6D931E8E2C5C00694903 /* BoxInfomationGotoneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1684,6 +1793,20 @@
 				94FC650B1E762C39006FC008 /* ForgetPassCodeViewController.xib in Resources */,
 				941576121E890B740014424D /* EnterpriseGoodsOwnerViewController.xib in Resources */,
 				943BF9FC1E4C6D950092C2F2 /* BoxSourceView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CD6D841E8E2BAB00694903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CD6D921E8E2C5C00694903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1818,7 +1941,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94CD6D821E8E2BAB00694903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CD6D891E8E2BAB00694903 /* BoxInfomationGotoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CD6D901E8E2C5C00694903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CD6D971E8E2C5C00694903 /* BoxInfomationGotoneUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94CD6D8C1E8E2BAB00694903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94642ECC1E16392200F47883 /* BoxInfomationGotone */;
+			targetProxy = 94CD6D8B1E8E2BAB00694903 /* PBXContainerItemProxy */;
+		};
+		94CD6D9A1E8E2C5C00694903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94642ECC1E16392200F47883 /* BoxInfomationGotone */;
+			targetProxy = 94CD6D991E8E2C5C00694903 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94642ED91E16392300F47883 /* Main.storyboard */ = {
@@ -1969,6 +2121,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b1779f9d-e4ef-477c-aeec-86f0e92c7cc8";
 				PROVISIONING_PROFILE_SPECIFIER = xiangxintongDevelop;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				STRIP_PNG_TEXT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2011,8 +2164,61 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b1779f9d-e4ef-477c-aeec-86f0e92c7cc8";
 				PROVISIONING_PROFILE_SPECIFIER = xiangxintongDevelop;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				STRIP_PNG_TEXT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		94CD6D8D1E8E2BAB00694903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BoxInfomationGotoneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhang.BoxInfomationGotoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoxInfomationGotone.app/BoxInfomationGotone";
+			};
+			name = Debug;
+		};
+		94CD6D8E1E8E2BAB00694903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BoxInfomationGotoneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhang.BoxInfomationGotoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoxInfomationGotone.app/BoxInfomationGotone";
+			};
+			name = Release;
+		};
+		94CD6D9C1E8E2C5C00694903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BoxInfomationGotoneUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhang.BoxInfomationGotoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b1779f9d-e4ef-477c-aeec-86f0e92c7cc8";
+				TEST_TARGET_NAME = BoxInfomationGotone;
+			};
+			name = Debug;
+		};
+		94CD6D9D1E8E2C5C00694903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BoxInfomationGotoneUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhang.BoxInfomationGotoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b1779f9d-e4ef-477c-aeec-86f0e92c7cc8";
+				TEST_TARGET_NAME = BoxInfomationGotone;
 			};
 			name = Release;
 		};
@@ -2036,6 +2242,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		94CD6D8F1E8E2BAB00694903 /* Build configuration list for PBXNativeTarget "BoxInfomationGotoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CD6D8D1E8E2BAB00694903 /* Debug */,
+				94CD6D8E1E8E2BAB00694903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94CD6D9B1E8E2C5C00694903 /* Build configuration list for PBXNativeTarget "BoxInfomationGotoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CD6D9C1E8E2C5C00694903 /* Debug */,
+				94CD6D9D1E8E2C5C00694903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
