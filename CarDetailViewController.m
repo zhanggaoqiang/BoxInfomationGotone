@@ -75,8 +75,7 @@
         self.latestAdress.text=BACKINFO_DIC_2_OBJECT(dict1, @"tsiDeparturePlace");
         self.attentionRoute1.text=BACKINFO_DIC_2_OBJECT(dict1, @"tsiDeparturePlace");
         self.attentionRoute2.text=BACKINFO_DIC_2_OBJECT(dict1, @"tsiDestination");
-        
-           [SVProgressHUD dismiss];
+        [SVProgressHUD dismiss];
      
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"连接失败");

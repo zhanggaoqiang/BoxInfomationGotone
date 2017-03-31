@@ -42,7 +42,7 @@
                             <constraint firstAttribute="height" constant="20" id="M11-Ma-hav"/>
                             <constraint firstAttribute="width" constant="50" id="xb7-Od-O43"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -180,6 +180,7 @@
                 <outlet property="endCity" destination="F6n-ro-jUK" id="QTq-VG-png"/>
                 <outlet property="endDis" destination="Hqo-nr-rJb" id="W2U-RF-LP8"/>
                 <outlet property="goodlength" destination="IwS-WR-Rvo" id="CyR-UN-0SU"/>
+                <outlet property="goodsKinds" destination="hXQ-4r-tZg" id="Cgp-nw-4Fk"/>
                 <outlet property="name" destination="EbE-Db-k8H" id="CDS-b5-VZ1"/>
                 <outlet property="startCity" destination="jmB-bB-7JV" id="scj-JX-7sQ"/>
                 <outlet property="startDetailAdress" destination="NfW-wU-oGH" id="eX0-LC-way"/>

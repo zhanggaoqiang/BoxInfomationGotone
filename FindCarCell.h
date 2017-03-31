@@ -22,6 +22,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *carKindslabel;
 @property (strong, nonatomic) IBOutlet UILabel *goodlength;
 
+@property (strong, nonatomic) IBOutlet UILabel *goodsKinds;
 -(void)showDataWithModel:(GoodsOwnerModel *)model;
 
 

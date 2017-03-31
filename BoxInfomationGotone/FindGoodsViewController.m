@@ -316,6 +316,7 @@ int indexPage=4;
     
     
     if (flag==2) {
+       
         self.startAdress.text=[self.provinceArray objectAtIndex:[self.myPicker selectedRowInComponent:0]];
         self.startAdress.text= [self.startAdress.text stringByAppendingString:@"-"];
         
@@ -328,6 +329,8 @@ int indexPage=4;
     }
     
     if (flag==3) {
+        
+       
         self.endAdress.text=[self.provinceArray objectAtIndex:[self.myPicker selectedRowInComponent:0]];
         self.endAdress.text= [self.endAdress.text stringByAppendingString:@"-"];
         
@@ -632,6 +635,17 @@ int indexPage=4;
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField==self.startAdress) {
+        
+        
+        [self.inputGoodsDetail resignFirstResponder];
+        [self.inputGoodsPrize resignFirstResponder];
+        [self.inputGoodsGravity resignFirstResponder];
+        [self.inputGoodsVloum resignFirstResponder];
+        
+        
+        [self.inputRemark resignFirstResponder];
+        [self.ownerBoxFlag resignFirstResponder];
+
         flag=2;
         [self.view addSubview:self.maskView];
         [self.view addSubview:self.pickerBgView];
@@ -647,6 +661,15 @@ int indexPage=4;
     }
     
     if (textField==self.endAdress) {
+        [self.inputGoodsDetail resignFirstResponder];
+        [self.inputGoodsPrize resignFirstResponder];
+        [self.inputGoodsGravity resignFirstResponder];
+        [self.inputGoodsVloum resignFirstResponder];
+        
+        
+        [self.inputRemark resignFirstResponder];
+        [self.ownerBoxFlag resignFirstResponder];
+
         flag=3;
         [self.view addSubview:self.maskView];
         [self.view addSubview:self.pickerBgView];
@@ -676,6 +699,18 @@ int indexPage=4;
     }
     
     if(textField==self.ownerBoxFlag) {
+        
+        [self.inputGoodsDetail resignFirstResponder];
+        [self.inputGoodsPrize resignFirstResponder];
+        [self.inputGoodsGravity resignFirstResponder];
+        [self.inputGoodsVloum resignFirstResponder];
+        [self.startAdress resignFirstResponder];
+        [self.endAdress resignFirstResponder];
+        [self.inputRemark resignFirstResponder];
+        [self.ownerBoxFlag resignFirstResponder];
+
+        
+        [self.ownerBoxFlag resignFirstResponder];
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"是",@"否", nil];
         [actionSheet showInView:self.view];
         [self.ownerBoxFlag resignFirstResponder];
@@ -806,17 +841,17 @@ int indexPage=4;
     
     
     
-    if(!SingleDefaluts.bol_Login) {
-        [self presentViewController:[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"] animated:YES completion:nil];
-        
-        
-    }else {
+//    if(!SingleDefaluts.bol_Login) {
+//        [self presentViewController:[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"] animated:YES completion:nil];
+//        
+//        
+//    }else {
     CarDetailViewController *carDetail=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"CarDetailViewController"];
     BoxFirstPageModel *model=_mutArr[indexPath.row];
     carDetail.index=model.tsiId;
 
     [self.navigationController pushViewController:carDetail animated:YES];
-    }
+   // }
     
 }
 
@@ -872,7 +907,7 @@ int indexPage=4;
     //湖南省-呼伦贝尔市-新城区
     
     
-    NSDictionary *dict=@{@"account":@"18538556305",
+    NSDictionary *dict=@{@"account":@"15324715795",
                          @"beginPlace":self.startAdress.text,
                          @"endPlace":  self.endAdress.text,
                          @"cargoWeight":self.inputGoodsGravity.text,
@@ -892,7 +927,11 @@ int indexPage=4;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
        
         
-        [ SVProgressHUD  showWithStatus:@"发布成功"];
+        [ SVProgressHUD  showWithStatus:@"发布成功，你可以去货源大厅查看你刚发布的那条信息哦!"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+            
+        });
         
         
         
@@ -909,6 +948,12 @@ int indexPage=4;
             self.inputGoodsDetail.text=@"";
             self.inputGoodsVloum.text=@"";
             self.returnBoxAdress.text=@"";
+            self.ownerBoxFlag.text=@"";
+            self.inputRemark.text=@"";
+            
+            
+            
+            
             
         });
     

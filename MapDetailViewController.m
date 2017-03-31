@@ -14,11 +14,6 @@
 
 
 @interface MapDetailViewController()
-@property(nonatomic,strong)NSString *startCity1;
-@property(nonatomic,strong)NSString *endCity1;
-
-@property(nonatomic,strong)NSString *startDis1;
-@property(nonatomic,strong)NSString *endDis1;
 
 
 
@@ -42,6 +37,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [SVProgressHUD showSuccessWithStatus:@"正在规划路线中..."];
+    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    _routesearch.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    
+
  
     
     if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0))
@@ -54,22 +55,23 @@
     
     _mapView.hidden=YES;
 
-    [SVProgressHUD showSuccessWithStatus:@"asdfsa"];
+    
     
     _routesearch = [[BMKRouteSearch alloc]init];
-    _startAddrText = @"";
+    _startAddrText = self.startDis;
     _wayPointAddrText = @"";
-    _endAddrText= @"";
+    _endAddrText= self.endDis;
     
     _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
     _routesearch.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
     
     BMKPlanNode* start = [[BMKPlanNode alloc]init];
     start.name = _startAddrText;
-    start.cityName = @"郑州市";
+    start.cityName = self.startCity;
+    NSLog(@"开始地是%@",self.startCity);
     BMKPlanNode* end = [[BMKPlanNode alloc]init];
     end.name = _endAddrText;
-    end.cityName = @"北京z";
+    end.cityName = self.endCity;
     
     
     
@@ -86,27 +88,6 @@
     {
         NSLog(@"car检索发送失败");
     }
-    
-}
-
-
--(void)viewWillAppear:(BOOL)animated {
-    
-    self.startCity1=self.startCity;
-    self.endCity1=self.endCity;
-    self.startDis1=self.startDis;
-    self.endDis1=self.endDis;
-    
-
-    
-   
-
-    [_mapView viewWillAppear];
-    
-     [SVProgressHUD showSuccessWithStatus:@"正在规划路线中..."];
-    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
-    _routesearch.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
-    
     
 }
 
@@ -260,7 +241,7 @@
 
 
 - (IBAction)mapbackbutton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
@@ -269,35 +250,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-//
-//    //初始化检索对象
-//    _searcher =[[BMKGeoCodeSearch alloc]init];
-//    _searcher.delegate = self;
-//    BMKGeoCodeSearchOption *geoCodeSearchOption = [[BMKGeoCodeSearchOption alloc]init];
-//    geoCodeSearchOption.city= @"郑州市";
-//    geoCodeSearchOption.address = @"管城区航海路经开十八大街国际路开发建设有限公司";
-//    BOOL flag = [_searcher geoCode:geoCodeSearchOption];
-//   // [geoCodeSearchOption release];
-//    if(flag)
-//    {
-//        NSLog(@"geo检索发送成功");
-//    }
-//    else
-//    {
-//        NSLog(@"geo检索发送失败");
-//    }
-//
-//    BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-//
-//
-//    CLLocationCoordinate2D coor;
-//    coor.latitude = 39.915;
-//    coor.longitude = 116.404;
-//    annotation.coordinate = coor;
-//    [mapView addAnnotation:annotation];
-//
 
 
 /*

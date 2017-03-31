@@ -122,7 +122,10 @@
                     
                     SingleDefaluts.bol_Login=YES;
                     [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
-                    
+//                    jo.put("ecoStatus", ecoStatus);企业货主认证状态
+//                    jo.put("clcStatus", clcStatus);集装箱租赁公司认证状态
+//                    jo.put("tkStatus", tkStatus);个人车主认证状态
+//                    jo.put("coStatus", coStatus);个人货主认证状态
                     
                     
                     
@@ -145,8 +148,9 @@
             
             
             
-            if ([dict[@"message"] isEqualToString:@"账号不存在或者错误！"]) {
+            if ([dict[@"message"] isEqualToString:@"账号不存在或者错误"]) {
                 [ SVProgressHUD showWithStatus:@"账号不存在或密码错误"];
+                [SVProgressHUD setBackgroundColor:[UIColor blackColor]];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [SVProgressHUD dismiss];
                     

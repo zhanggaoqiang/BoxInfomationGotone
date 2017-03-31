@@ -23,6 +23,7 @@
 
 
 -(void)showDataWithModel:(GoodsOwnerModel *)model {
+    NSString *goodsAdress=@"货源地址: ";
     
     self.name.text=model.csiContactName;
     self.startCity.text=model.csiDpCity;
@@ -30,12 +31,12 @@
     self.startDis.text=model.csiDpDistrict;
     self.endDis.text=model.csiRpDistrict;
     self.startDetailAdress.text=model.csiReceiptPlace;
+    self.startDetailAdress.text=[goodsAdress stringByAppendingString:self.startDetailAdress.text];
     self.carKindslabel.text=model.csiTruckType;
     self.volumeLabel.text=model.csiCargoWeight;
     self.goodlength.text=model.csiMinTruckLength;
-    
-    
-    
+    self.goodsKinds.text=model.csiCargoDesc;
+     
 }
 
 @end

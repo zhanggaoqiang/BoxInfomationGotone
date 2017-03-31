@@ -637,6 +637,8 @@
             model.csiDpDistrict=BACKINFO_DIC_2_OBJECT(dict, @"csiDpDistrict");
             model.csiMinTruckLength=BACKINFO_DIC_2_OBJECT(dict, @"csiMinTruckLength");
             model.index=BACKINFO_DIC_2_OBJECT(dict, @"csiId");
+            model.csiCargoDesc=BACKINFO_DIC_2_OBJECT(dict, @"csiCargoDesc");
+            model.csiTruckType=BACKINFO_DIC_2_OBJECT(dict, @"csiTruckType");
             [_dataArr addObject:model];
         }
 

@@ -46,6 +46,8 @@
 @property(nonatomic,strong)NSString *csiCargoWeight;//车的载重
 @property(nonatomic,strong)NSString *csiMinTruckLength;//车的最小长度
 @property(nonatomic,strong)NSString *csiMaxTruckLength;//车的最大长度
+@property(nonatomic,strong)NSString *csiCargoDesc;//货物诶性
+
 
 @end
 
