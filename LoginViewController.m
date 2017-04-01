@@ -128,8 +128,16 @@
             NSLog(@"%@",dict);
             
             if ([dict[@"flag"]  isEqual:@0]) {
-                
                 [SVProgressHUD showWithStatus:@"登录中"];
+                SingleDefaluts.obj_User.coStatus=dict[@"coStatus"];
+                SingleDefaluts.obj_User.ecoStatus=dict[@"ecoStatus"];
+                SingleDefaluts.obj_User.clcStatus=dict[@"clcStatus"];
+                SingleDefaluts.obj_User.tkStatus=dict[@"tkStatus"];
+                NSLog(@"个人车主是%@", SingleDefaluts.obj_User.coStatus);
+                
+                
+                
+                
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [SVProgressHUD dismiss];
                     
@@ -179,6 +187,15 @@
             
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            [SVProgressHUD showErrorWithStatus:@"连接失败"];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                return;
+                
+            });
+
             NSLog(@"连接失败");
         }];
     }
@@ -189,6 +206,7 @@
         
         
        // [self  presentViewController:[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"RegistViewController"] animated:YES completion:nil];
+        
         
         [self.navigationController pushViewController:[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"RegistViewController"] animated:YES];
 //        [self.navigationController pushViewController:[[LViewController alloc] init] animated:YES];
@@ -209,7 +227,7 @@
 - (IBAction)forgetCode:(id)sender {
     
     ForgetPassCodeViewController *forget=[[ForgetPassCodeViewController alloc] init];
-    [self.navigationController pushViewController:forget animated:YES];
+    [self presentViewController:forget animated:YES completion:nil];
     
 }
 

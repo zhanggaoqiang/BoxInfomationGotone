@@ -152,7 +152,7 @@
             changeVc.phone=self.phoneText.text;
             
             
-            [self.navigationController pushViewController:changeVc animated:YES];
+            [self presentViewController:changeVc animated:YES completion:nil];
             
         }
         
@@ -163,7 +163,7 @@
 }
 - (IBAction)backBtn:(id)sender {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

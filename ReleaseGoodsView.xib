@@ -39,7 +39,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poi-Ov-pQ1">
                             <rect key="frame" x="0.0" y="150" width="375" height="50"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入货物重量" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-A4-NL3">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入货物重量(吨)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-A4-NL3">
                                     <rect key="frame" x="15" y="10" width="360" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="Evu-jD-Hqi"/>
@@ -60,7 +60,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-wi-qy0">
                             <rect key="frame" x="0.0" y="201" width="375" height="50"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请输入货物体积" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-Pb-jN7">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请输入货物体积(立方)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-Pb-jN7">
                                     <rect key="frame" x="15" y="10" width="360" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="n1d-cL-GVt"/>
@@ -81,7 +81,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNp-4E-mrQ">
                             <rect key="frame" x="0.0" y="252" width="375" height="50"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择车型车长" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-tP-dIN">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择车型车长(米)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIT-tP-dIN">
                                     <rect key="frame" x="15" y="10" width="360" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="PUb-b3-34Z"/>
@@ -105,7 +105,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b29-sN-53e">
                             <rect key="frame" x="0.0" y="303" width="375" height="50"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入货物运费" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-Jl-KGc">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入货物运费(元)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-Jl-KGc">
                                     <rect key="frame" x="15" y="10" width="355" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="SzL-4F-c6V"/>

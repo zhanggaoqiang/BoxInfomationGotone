@@ -55,6 +55,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //                    jo.put("ecoStatus", ecoStatus);企业货主认证状态
+    //                    jo.put("clcStatus", clcStatus);集装箱租赁公司认证状态
+    //                    jo.put("tkStatus", tkStatus);个人车主认证状态
+    //                    jo.put("coStatus", coStatus);个人货主认证状态
+    
+    [_cerBtn setTitle:@"已认证:" forState:UIControlStateNormal];
+    
+    if (SingleDefaluts.obj_User.clcStatus) {
+       
+
+        [_cerBtn.titleLabel.text stringByAppendingString:@"集装箱公司,"];
+         NSLog(@"已经认证了:%@",self.cerBtn.titleLabel.text);
+        
+    }
+    if (SingleDefaluts.obj_User.ecoStatus ) {
+        [_cerBtn.titleLabel.text stringByAppendingString:@"企业货主,"];
+    }
+    if (SingleDefaluts.obj_User.tkStatus) {
+        [_cerBtn.titleLabel.text stringByAppendingString:@"个人车主,"];
+    }
+    if (SingleDefaluts.obj_User.coStatus ) {
+        [_cerBtn.titleLabel.text stringByAppendingString:@"个人货主"];
+        
+    }else {
+        [_cerBtn setTitle:@"未认证" forState:UIControlStateNormal];
+    }
+    
+    
+    NSLog(@"已经认证了:%@",self.cerBtn.titleLabel.text);
+    
+  //  _cerBtn setTitle:@"已经认证" forState:<#(UIControlState)#>
+    
+    
     _dataArr=[[NSArray alloc] initWithObjects:@[@"站位"],@[@"我的订单"],@[@"我的钱包"],@[@"消息中心"],@[@"会员中心"] ,@[@"认证中心",@"我的车辆",@"投诉/客服",@"我的收藏",@"注销"],nil];
     _dataArrImg=[[NSArray alloc] initWithObjects:@[@"sd"],@[@"wallet.png"],@[@"wallet.png"],@[@"news.png"],@[@"vip.png"] ,@[@"download.png",@"collect.png",@"collect.png",@"collect.png",@"cancle.png"],nil];
     
@@ -75,6 +108,9 @@
 
     // Do any additional setup after loading the view.
 }
+
+
+
 
 
 -(void)firstPageRequest {

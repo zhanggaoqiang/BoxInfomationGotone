@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZGQSingleClass.h"
+#import "PZWelcomeViewController.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import <BaiduMapAPI_Base/BMKMapManager.h>
 // 引入JPush功能所需头文件
@@ -87,14 +88,38 @@
         NSLog(@"manager start failed!");
     }
     
-     
-    [self setWindowRootViewController];
-    [self setTabBar];
+    
+    
+    [self changeWelcome];
+    
     
     
     // Override point for customization after application launch.
     return YES;
 }
+
+
+-(void)changeWelcome {
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:kStr_FirstLocation ]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kStr_FirstLocation ];
+        
+        [ZGQSingleClass killUserInfo];
+        self.window.rootViewController=[[PZWelcomeViewController alloc] init];
+        
+        
+    }
+    else {
+    
+    
+    [self setWindowRootViewController];
+    [self setTabBar];
+    }
+
+    
+}
+
+
 
 
 

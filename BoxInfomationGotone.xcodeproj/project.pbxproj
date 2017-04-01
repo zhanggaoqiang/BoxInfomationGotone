@@ -180,6 +180,10 @@
 		94D00B4A1E1B376B007BA7CA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D00B491E1B376B007BA7CA /* LoginViewController.m */; };
 		94D00B501E1B7AFB007BA7CA /* ZGQSingleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D00B4F1E1B7AFB007BA7CA /* ZGQSingleClass.m */; };
 		94D00B531E1B7FE2007BA7CA /* ZGQGetUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D00B521E1B7FE2007BA7CA /* ZGQGetUserInfo.m */; };
+		94D059941E8F7C0700E7B250 /* PZWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D059931E8F7C0700E7B250 /* PZWelcomeViewController.m */; };
+		94D059A81E8F7E0E00E7B250 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D059A51E8F7E0E00E7B250 /* EAIntroPage.m */; };
+		94D059A91E8F7E0E00E7B250 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D059A71E8F7E0E00E7B250 /* EAIntroView.m */; };
+		94D059AD1E8F80BD00E7B250 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D059AC1E8F80BD00E7B250 /* UIButton+Block.m */; };
 		94D05C7A1E4C502900AEED99 /* FindCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D05C781E4C502900AEED99 /* FindCarCell.m */; };
 		94D05C7B1E4C502900AEED99 /* FindCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D05C791E4C502900AEED99 /* FindCarCell.xib */; };
 		94D6FD2D1E1DC8C4000D80EF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6FD2C1E1DC8C4000D80EF /* SettingViewController.m */; };
@@ -603,6 +607,14 @@
 		94D00B4F1E1B7AFB007BA7CA /* ZGQSingleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGQSingleClass.m; sourceTree = "<group>"; };
 		94D00B511E1B7FE2007BA7CA /* ZGQGetUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGQGetUserInfo.h; sourceTree = "<group>"; };
 		94D00B521E1B7FE2007BA7CA /* ZGQGetUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGQGetUserInfo.m; sourceTree = "<group>"; };
+		94D059921E8F7C0700E7B250 /* PZWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZWelcomeViewController.h; sourceTree = "<group>"; };
+		94D059931E8F7C0700E7B250 /* PZWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZWelcomeViewController.m; sourceTree = "<group>"; };
+		94D059A41E8F7E0E00E7B250 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
+		94D059A51E8F7E0E00E7B250 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
+		94D059A61E8F7E0E00E7B250 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
+		94D059A71E8F7E0E00E7B250 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
+		94D059AB1E8F80BD00E7B250 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		94D059AC1E8F80BD00E7B250 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 		94D05C771E4C502900AEED99 /* FindCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCarCell.h; sourceTree = "<group>"; };
 		94D05C781E4C502900AEED99 /* FindCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCarCell.m; sourceTree = "<group>"; };
 		94D05C791E4C502900AEED99 /* FindCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCarCell.xib; sourceTree = "<group>"; };
@@ -1413,6 +1425,35 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		94D059911E8F7BF700E7B250 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				94D059921E8F7C0700E7B250 /* PZWelcomeViewController.h */,
+				94D059931E8F7C0700E7B250 /* PZWelcomeViewController.m */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		94D059A31E8F7DFD00E7B250 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				94D059A41E8F7E0E00E7B250 /* EAIntroPage.h */,
+				94D059A51E8F7E0E00E7B250 /* EAIntroPage.m */,
+				94D059A61E8F7E0E00E7B250 /* EAIntroView.h */,
+				94D059A71E8F7E0E00E7B250 /* EAIntroView.m */,
+			);
+			name = IntroView;
+			sourceTree = "<group>";
+		};
+		94D059AA1E8F80AC00E7B250 /* Button+Block */ = {
+			isa = PBXGroup;
+			children = (
+				94D059AB1E8F80BD00E7B250 /* UIButton+Block.h */,
+				94D059AC1E8F80BD00E7B250 /* UIButton+Block.m */,
+			);
+			name = "Button+Block";
+			sourceTree = "<group>";
+		};
 		94D720DE1E778924006F784C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1507,6 +1548,8 @@
 		94EBE4081E569C1F000075BB /* Toos */ = {
 			isa = PBXGroup;
 			children = (
+				94D059AA1E8F80AC00E7B250 /* Button+Block */,
+				94D059A31E8F7DFD00E7B250 /* IntroView */,
 				940D8F441E8A4D570003095D /* ChildViewControl */,
 				940D8ECC1E8A081B0003095D /* Aliapay */,
 				94BEF0FE1E7FC9AC0091618E /* JXButton */,
@@ -1554,6 +1597,7 @@
 		94EBE4381E56C8F4000075BB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				94D059911E8F7BF700E7B250 /* Welcome */,
 				94EC088E1E7B7590005CF4F3 /* ConfirmOrder */,
 				94C072581E65135500802BB0 /* Foundation+Log.m */,
 				94CBF1B71E5D1EA200B50A9E /* BoxModel.h */,
@@ -1822,11 +1866,13 @@
 				94E9BF081E16561600E0DC2A /* FindGoodsViewController.m in Sources */,
 				943BF9FA1E4C65C70092C2F2 /* ReleaseCarSource.m in Sources */,
 				94D8AA3F1E5526CD00B263E1 /* ModelCarViewController.m in Sources */,
+				94D059A81E8F7E0E00E7B250 /* EAIntroPage.m in Sources */,
 				94D00B441E1B3092007BA7CA /* UIImage+WebP.m in Sources */,
 				940D8F331E8A0A850003095D /* Order.m in Sources */,
 				94E4EA811E17560F00DC724B /* AFSecurityPolicy.m in Sources */,
 				94265A301E68F07C00DA4BDE /* MJRefreshBackGifFooter.m in Sources */,
 				94B3F62B1E51A36F00FD0E4E /* InfomationCenterViewController.m in Sources */,
+				94D059AD1E8F80BD00E7B250 /* UIButton+Block.m in Sources */,
 				94FC50DB1E7291B700F9A94D /* OwnerOfCargoViewController.m in Sources */,
 				94265A2A1E68F07C00DA4BDE /* MJRefreshComponent.m in Sources */,
 				94CBF1D31E5D328A00B50A9E /* UIView+STFrame.m in Sources */,
@@ -1849,9 +1895,11 @@
 				94265A331E68F07C00DA4BDE /* MJRefreshGifHeader.m in Sources */,
 				9412F21F1E4DD519006493D5 /* NowCertificateViewController.m in Sources */,
 				943A59071E6D4590009C40D4 /* PersonCellImage.m in Sources */,
+				94D059A91E8F7E0E00E7B250 /* EAIntroView.m in Sources */,
 				942EC6161E4AFB6200CB4AF4 /* ReleaseGoodsView.m in Sources */,
 				94E4EA831E17560F00DC724B /* AFURLResponseSerialization.m in Sources */,
 				940D8F341E8A0A850003095D /* base64.m in Sources */,
+				94D059941E8F7C0700E7B250 /* PZWelcomeViewController.m in Sources */,
 				94CBF1D11E5D328A00B50A9E /* STPickerViewConst.m in Sources */,
 				940D8F361E8A0A850003095D /* openssl_wrapper.m in Sources */,
 				94D00B3E1E1B3092007BA7CA /* SDWebImageDownloaderOperation.m in Sources */,
@@ -2250,6 +2298,7 @@
 				94CD6D8E1E8E2BAB00694903 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94CD6D9B1E8E2C5C00694903 /* Build configuration list for PBXNativeTarget "BoxInfomationGotoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -2258,6 +2307,7 @@
 				94CD6D9D1E8E2C5C00694903 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

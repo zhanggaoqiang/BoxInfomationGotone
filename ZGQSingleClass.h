@@ -15,6 +15,8 @@
 @property(nonatomic,strong)ZGQGetUserInfo *obj_User;
 @property(nonatomic,assign)BOOL bol_Login;
 +(ZGQSingleClass *)sharedSingleClass;
++(BOOL)killUserInfo ;
+
 
 
 

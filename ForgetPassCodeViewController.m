@@ -28,7 +28,7 @@
 
 - (IBAction)backBtn:(id)sender {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -73,8 +73,7 @@
             IdentifyCodeViewController *identify=[[IdentifyCodeViewController alloc] init];
             
             identify.phoneStr=self.phoneTextFiled.text;
-                [self.navigationController pushViewController:identify animated:YES];
-            
+            [self presentViewController:identify animated:YES completion:nil];
         }else {
             [SVProgressHUD showErrorWithStatus:@"账号不存在"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

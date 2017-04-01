@@ -84,3 +84,12 @@ static NSString * const kStrTips_Z_Login_TipsSureTitle              = @"立即�
 static NSString * const kStrTips_Z_Login_TipsCancleTitle            = @"稍后再登";
 
 
+
+
+/**
+ *  本地第一次启动判断
+ */
+static NSString * const kStr_FirstLocation = @"kStr_FirstLocation";
+
+
+

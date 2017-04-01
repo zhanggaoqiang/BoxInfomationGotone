@@ -79,6 +79,8 @@
         [SVProgressHUD dismiss];
      
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        
         NSLog(@"连接失败");
     }];
 

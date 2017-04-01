@@ -12,6 +12,7 @@
 #import "ModelCarViewController.h"
 #import "OwnerCarViewController.h"
 #import "GoodDetailViewController.h"
+#import "LoginViewController.h"
 #define MAIN_STORYBOARD [UIStoryboard storyboardWithName:@"Main" bundle:nil]
 
 
@@ -370,6 +371,14 @@
     
     
     if (flag==2) {
+        
+        [self.LicensePlateNumber resignFirstResponder];
+        [self.carKindsAndlength resignFirstResponder];
+        
+        [self.carLoad resignFirstResponder];
+        [self.carVolume resignFirstResponder];
+        [self.haveCar resignFirstResponder];
+
        
         
         self.startAdress.text=[self.provinceArray objectAtIndex:[self.myPicker selectedRowInComponent:0]];
@@ -385,6 +394,14 @@
     }
     
     if (flag==4) {
+        
+        [self.LicensePlateNumber resignFirstResponder];
+        [self.carKindsAndlength resignFirstResponder];
+        
+        [self.carLoad resignFirstResponder];
+        [self.carVolume resignFirstResponder];
+        [self.haveCar resignFirstResponder];
+
         
         
         self.endStress.text=[self.provinceArray objectAtIndex:[self.myPicker selectedRowInComponent:0]];
@@ -583,6 +600,9 @@
 
 #pragma mark - private method
 - (IBAction)showMyPicker:(id)sender {
+    
+   
+    
     [self.view addSubview:self.maskView];
     [self.view addSubview:self.pickerBgView];
     self.maskView.alpha = 0;
@@ -734,6 +754,23 @@
 //        UIModalPresentationNone NS_ENUM_AVAILABLE_IOS(7_0) = -1,
 //    };
 //
+    
+    if(!SingleDefaluts.bol_Login) {
+        
+        LoginViewController *locv=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"];
+     
+        
+        
+        
+        [self presentViewController:locv animated:YES completion:nil];
+        return;
+        
+        
+    }
+    
+
+    
+    
     GoodDetailViewController *goodsDetail=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"GoodDetailViewController"];
     GoodsOwnerModel *model=_dataArr[indexPath.row];
     goodsDetail.index= model.index;
@@ -781,13 +818,28 @@
         return;
     }
     
-    if ([self.haveCar.text isEqualToString:@""]) {
-        [SVProgressHUD showErrorWithStatus:@"请选择已有车辆"];
+//    if ([self.haveCar.text isEqualToString:@""]) {
+//        [SVProgressHUD showErrorWithStatus:@"请选择已有车辆"];
+//        return;
+//    }
+//    
+    
+    
+    
+    if(!SingleDefaluts.bol_Login) {
+        
+        LoginViewController *locv=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        locv.flagStr=@"发布货源";
+        
+        
+        
+        [self presentViewController:locv animated:YES completion:nil];
         return;
+        
+        
     }
     
-    
-    
+
     
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
     manager.requestSerializer=[AFHTTPRequestSerializer serializer];

@@ -62,9 +62,10 @@
         
         if ([dict[@"flag"] isEqual:@0]) {
               [SVProgressHUD showSuccessWithStatus:@"密码修改成功"];
-            [self.navigationController pushViewController:[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"]animated:YES];
             
-        }
+            [self presentViewController:[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"] animated:YES completion:nil];
+            
+                   }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"连接失败");

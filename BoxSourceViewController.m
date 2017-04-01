@@ -10,6 +10,7 @@
 #import "BoxCellTableViewCell.h"
 #import "BoxKindsChoiceViewController.h"
 #import "BoxDetailViewController.h"
+#import "LoginViewController.h"
 #define MAIN_STORYBOARD [UIStoryboard storyboardWithName:@"Main" bundle:nil]
 
 @interface BoxSourceViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UIGestureRecognizerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate>
@@ -118,7 +119,6 @@ int indexpage2=4;
     
     
     _boxFiledChoice.delegate=self;
-    _boxFiledChoice.text=@"asdf";
     
     
     _startLabel=[[UILabel alloc] initWithFrame:CGRectMake(5, 10, self.view.frame.size.width/2-10, 30)];
@@ -193,7 +193,7 @@ int indexpage2=4;
 -(void)dismissKeyboard {
     
     
-    [self.boxFiledChoice resignFirstResponder];
+  
     [self.boxContainer resignFirstResponder];
     [self.boxLoad resignFirstResponder];
     [self.boxRemark resignFirstResponder];
@@ -662,6 +662,16 @@ int indexpage2=4;
     if (textField==_boxReturnAdress) {
         flag=3;
         
+       // [self.boxFiledChoice resignFirstResponder];
+        [self.boxContainer resignFirstResponder];
+        [self.boxLoad resignFirstResponder];
+        [self.boxRemark resignFirstResponder];
+    
+      
+        
+
+        
+        
         
         [self.view addSubview:self.maskView];
         [self.view addSubview:self.pickerBgView];
@@ -719,6 +729,67 @@ int indexpage2=4;
 }
 
 - (IBAction)ensureReleaseBox:(id)sender {
+    
+    if ([self.boxFiledChoice.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"请选择集装箱类型"];
+        return;
+    }
+    
+
+    
+           if ([self.boxContainer.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"净重不能为空"];
+          return;
+    }
+    
+    if ([self.boxLoad.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"载重不能为空"];
+          return;
+    }
+    if ([self.boxRemark.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"备注信息不能为空"];
+        return;
+    }
+
+    
+    if ([self.boxReturnAdress.text  isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"还箱地不能为空"];
+          return;
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    if(!SingleDefaluts.bol_Login) {
+        
+        LoginViewController *locv=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        locv.flagStr=@"发布货源";
+        
+        
+        
+        [self presentViewController:locv animated:YES completion:nil];
+        return;
+        
+        
+    }
+    
+    
+    if (!SingleDefaluts.obj_User.clcStatus) {
+        
+        
+        [SVProgressHUD showErrorWithStatus:@"请先认证集装箱租赁公司"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }
+    
+
+    
+
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

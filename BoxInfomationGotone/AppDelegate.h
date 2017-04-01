@@ -27,5 +27,11 @@
 -(void)checkNetWorking;
 
 
+/**
+ *  改变跟视图
+ */
+-(void)changeWelcome;
+
+
 @end
 

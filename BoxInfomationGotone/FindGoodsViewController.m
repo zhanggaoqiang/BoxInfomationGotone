@@ -11,6 +11,7 @@
 #import "ReleaseGoodsView.h"
 #import "ModelCarViewController.h"
 #import "CarDetailViewController.h"
+#import "LoginViewController.h"
 
 @interface FindGoodsViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,UITextFieldDelegate,UIGestureRecognizerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate>
 {
@@ -777,6 +778,7 @@ int indexPage=4;
     if (buttonIndex == 1)
     {
         self.ownerBoxFlag.text=@"否";
+         self.returnBoxAdress.text=@"";
         
     }
 }
@@ -838,7 +840,20 @@ int indexPage=4;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if(!SingleDefaluts.bol_Login) {
+        
+        LoginViewController *locv=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        locv.flagStr=@"发布货源";
+        
+        
+        
+        [self presentViewController:locv animated:YES completion:nil];
+        return;
+        
+        
+    }
     
+
     
     
 //    if(!SingleDefaluts.bol_Login) {
@@ -895,6 +910,36 @@ int indexPage=4;
     }
     
     
+    if ([self.ownerBoxFlag.text isEqualToString:@"是"] &&[self.returnBoxAdress.text isEqualToString:@""] ) {
+        [SVProgressHUD  showErrorWithStatus:@"请输入还箱地"];
+        return;
+
+    }
+    
+    
+    if(!SingleDefaluts.bol_Login) {
+        
+        LoginViewController *locv=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        locv.flagStr=@"发布货源";
+        
+        
+        
+        [self presentViewController:locv animated:YES completion:nil];
+        return;
+        
+        
+    }
+    
+    
+    if ((!SingleDefaluts.obj_User.ecoStatus)||(!SingleDefaluts.obj_User.coStatus)) {
+        
+        
+        [SVProgressHUD showErrorWithStatus:@"请先认证成为个人或者企业货主"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }
+    
     
    
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
@@ -938,29 +983,21 @@ int indexPage=4;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [ SVProgressHUD dismiss];
             
-            
-            self.startAdress.text=@"";
-            self.endAdress.text=@"";
-            self.inputGoodsGravity.text=@"";
-            self.modelCarFiled.text=@"";
-            self.inputGoodsVloum.text=@"";
-            self.inputGoodsPrize.text=@"";
-            self.inputGoodsDetail.text=@"";
-            self.inputGoodsVloum.text=@"";
-            self.returnBoxAdress.text=@"";
-            self.ownerBoxFlag.text=@"";
-            self.inputRemark.text=@"";
-            
-            
-            
-            
+//            
+//            self.startAdress.text=@"";
+//            self.endAdress.text=@"";
+//            self.inputGoodsGravity.text=@"";
+//            self.modelCarFiled.text=@"";
+//            self.inputGoodsVloum.text=@"";
+//            self.inputGoodsPrize.text=@"";
+//            self.inputGoodsDetail.text=@"";
+//            self.inputGoodsVloum.text=@"";
+//            self.returnBoxAdress.text=@"";
+//            self.ownerBoxFlag.text=@"";
+//            self.inputRemark.text=@"";
             
         });
     
-        
-        
-        
-        
    
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"连接失败");
