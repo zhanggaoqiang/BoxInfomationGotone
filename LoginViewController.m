@@ -133,6 +133,8 @@
                 SingleDefaluts.obj_User.ecoStatus=dict[@"ecoStatus"];
                 SingleDefaluts.obj_User.clcStatus=dict[@"clcStatus"];
                 SingleDefaluts.obj_User.tkStatus=dict[@"tkStatus"];
+                
+                SingleDefaluts.obj_User.mrAccount=dict[@"account"];
                 NSLog(@"个人车主是%@", SingleDefaluts.obj_User.coStatus);
                 
                 

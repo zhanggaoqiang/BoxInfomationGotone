@@ -101,7 +101,11 @@
 
 #define appGetOneCargoInfo @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetOneCargoInfo.do"//货源详情
 
-#define  appGetOneContainerInfo  @"http://192.168.18.65:8080/ContainerofCommunication/appGetOneContainerInfo.do"//箱源详情
+#define  appGetOneContainerInfo  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetOneContainerInfo.do"//箱源详情
+
+//http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetOneContainerInfo.do
+
+//http://192.168.18.65:8080/ContainerofCommunication/mobile/appGetOneCargoInfo.do
 
 #define appComplaintInfo   @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appComplaintInfo.do"//投诉
 #define appMyOwnerCarList  @"http://192.168.18.65:8080/ContainerofCommunication/mobile/appMyOwnerCarList.do"//我的车辆

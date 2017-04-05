@@ -542,7 +542,8 @@ int indexpage2=4;
             model.ctsiContainerLoad=BACKINFO_DIC_2_OBJECT(dict, @"ctsiContainerLoad");
             model.ctsiContainerType=BACKINFO_DIC_2_OBJECT(dict, @"ctsiContainerType");
             model.ctsiContainerSize=BACKINFO_DIC_2_OBJECT(dict, @"ctsiContainerSize");
-            [_dataArr addObject:model];
+        
+          
             
             [_dataArr addObject:model];
         }
@@ -596,6 +597,9 @@ int indexpage2=4;
                         model.ctsiContainerType=BACKINFO_DIC_2_OBJECT(dict, @"ctsiContainerType");
                         model.ctsiContainerSize=BACKINFO_DIC_2_OBJECT(dict, @"ctsiContainerSize");
                         model.index=BACKINFO_DIC_2_OBJECT(dict, @"ctsiId");
+                        
+                        model.iphoneNum=BACKINFO_DIC_2_OBJECT(dict, @"ctsiAccount");
+                        
                         [_dataArr addObject:model];
                     }
         }
@@ -869,6 +873,9 @@ int indexpage2=4;
     BoxDetailViewController *boxdetail=[MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"BoxDetailViewController"];
     BoxOwnerModel *modle=_dataArr[indexPath.row];
     boxdetail.index=modle.index;
+    boxdetail.iphoneNum=modle.iphoneNum;
+    
+    NSLog(@"襄垣详情%@", boxdetail.index);
     
     
     

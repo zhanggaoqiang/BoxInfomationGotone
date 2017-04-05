@@ -62,6 +62,8 @@
 @property (strong, nonatomic) NSString *ctsiPlace;//集装箱所在地
 @property(strong,nonatomic)NSString *index;//集装箱id
 
+@property(strong,nonatomic)NSString *iphoneNum;//手机号
+
 
 
 

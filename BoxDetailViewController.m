@@ -36,8 +36,9 @@
     
     [SVProgressHUD showSuccessWithStatus:@"loading"];
     
-    NSDictionary *dict1=@{@"account":@"15324715795",
+    NSDictionary *dict1=@{@"account":self.iphoneNum,
                           @"ctsiId":self.index};
+    NSLog(@"%@",self.index);
     
     
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];

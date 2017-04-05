@@ -11,4 +11,5 @@
 @interface BoxDetailViewController : UIViewController
 @property(strong,nonatomic)NSString *index;
 
+@property(strong,nonatomic)NSString *iphoneNum;
 @end
