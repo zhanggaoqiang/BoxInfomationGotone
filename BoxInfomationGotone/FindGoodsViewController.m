@@ -757,10 +757,6 @@ int indexPage=4;
             [self.ownerBoxFlag resignFirstResponder];
 
         }
-    
-        
-        
-        
     }
     
     return NO;

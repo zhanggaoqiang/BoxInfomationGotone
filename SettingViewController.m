@@ -200,7 +200,7 @@
         
         cell.SettingLabel.text=_dataArr[indexPath.section][indexPath.row];
         cell.SettingImage.image=[UIImage imageNamed:_dataArrImg[indexPath.section][indexPath.row]];
-        return cell;
+        return cell; 
         
         
         
